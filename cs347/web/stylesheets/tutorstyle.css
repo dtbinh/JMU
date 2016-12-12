@@ -1,0 +1,132 @@
+/*
+Tutors@JMU CSS StyleSheet
+*/
+
+
+body {
+  min-height: 400px;
+  margin-bottom: 100px;
+  clear: both;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+/*login.jsp styles
+-------------------------------------------------- */
+#alert_message {padding-top: 60px;}
+
+
+/*footer.jsp styles
+-------------------------------------------------- */
+@media screen and (max-width: 568px) {
+.copyright {
+    font-size:10px;
+    
+    }
+}
+.copyright {
+    color:white; 
+    position:absolute;
+    bottom:14pt;
+    }
+
+@media screen and (max-width: 768px) {
+    /*body { padding-top: 0px; }*/
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  height: 60px; /*Set the fixed height of the footer here*/ 
+  background-color: rgb(104,75,134) !important;
+}
+
+.footer-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    bottom:7pt;
+    position:absolute;
+    word-spacing: 10px;
+} 
+.footer-link {display: inline;}
+
+
+/*index.jsp styles
+-------------------------------------------------- */
+#home-container {
+    padding-top: 60px;
+}
+
+
+
+
+
+
+
+/*register.jsp styles
+-------------------------------------------------- */
+/*#inputUserReg, #inputPasswordConf, #inputLastName, #inputEmail {width: 400px;}*/
+.form-horizontal {width:50%;}
+.tutoring_classes_heading {font-size: 12px !important; font-weight: bold !important;}
+
+
+
+/*contact.jsp styles
+-------------------------------------------------- */
+#contact-container {padding-top: 60px;}
+
+
+
+
+/*help.jsp styles
+-------------------------------------------------- */
+#help-container {padding-top: 60px;}
+
+
+
+
+/*about.jsp styles
+-------------------------------------------------- */
+#about-container {padding-top: 60px;}
+
+
+
+
+
+
+
+/*postings.jsp styles
+--------------------------------------------------*/
+#welcome {
+    text-transform: uppercase !important;
+}
+
+#alert_message_success {
+    padding-top:30px;
+}
+
+.message li {
+    text-align: center; 
+    list-style-type: none;
+    font-size: 15px;
+} 
+
+
+
+
+/*change_password.jsp
+--------------------------------------------------*/
+
+#password, #passwordConf {box-sizing:border-box; width:400px;}
+
+
+
+/*headers */
+#nav {
+    position: fixed;
+    width: 100%;
+}

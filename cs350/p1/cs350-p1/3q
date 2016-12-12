@@ -1,0 +1,77 @@
+/* ************************************************************************* *
+ * main.c                                                                    *
+ * ------                                                                    *
+ *  Author:   CONNER TURNBULL                                                *
+ *  Purpose:  This is a template for project 1.                              *
+ * ************************************************************************* */
+
+
+/* ************************************************************************* *
+ * Library includes here.  For documentation of standard C library           *
+ * functions, see the list at:                                               *
+ *   http://pubs.opengroup.org/onlinepubs/009695399/functions/contents.html  *
+ * ************************************************************************* */
+ 
+#include <stdio.h>              /* standard I/O */
+#include <stdbool.h>            /* bool types */
+#include <stdint.h>             /* uint32_t, uint8_t, and similar types */
+
+#include "../cmdline/parse.h"   /* command line parser */
+
+
+/* ************************************************************************* *
+ * Local function declarations                                               *
+ * ************************************************************************* */
+
+
+/* ************************************************************************* *
+ * Global variable declarations                                              *
+ * ************************************************************************* */
+
+
+/* ************************************************************************* *
+ * main -- main entry point into the program.                                *
+ *                                                                           *
+ * Parameters                                                                *
+ *   argc -- the number of command-line arguments                            *
+ *   argv -- the array of command-line arguments (array of pointers to char) *
+ *                                                                           *
+ * Returns                                                                   *
+ *   Program exit status. The standard is to return 0 for normal exit (no    *
+ *   errors occurred). If something unusual happens, return some number      *
+ *   other than 0, which can then indicate to the user what happened.        *
+ *                                                                           *
+ * Notes                                                                     *
+ *   This function is similar to the "public static void Main" method used   *
+ *   in Java classes.                                                        *
+ * ************************************************************************* */
+
+int
+main (int argc, char **argv)
+{
+    /* Your implementation here. */
+    int return_code;
+    FILE *file_pointer;
+
+    return_code = parse_command_line (argc, argv);
+
+    /* Open the file and dynamically allocate the array here, using these
+     * printf statements as needed for verbose mode
+
+    printf ("Opening file \"%s\"\n", file_name);
+    printf ("File contains %" PRIu32 " bytes of data\n", bytes_in_file);
+
+     */
+    
+    if (verbose == 1)
+    {
+        printf ("Opening file \"%s\"\n", file_name);
+    }
+    
+    file_pointer = fopen(file_name, "r");
+    printf("herp derp %s", file_pointer);
+    
+    printf ("Return code is %d\n", return_code);
+
+    return 0;
+}

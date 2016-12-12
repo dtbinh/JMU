@@ -1,0 +1,75 @@
+ <!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    <package name="default" extends="struts-default">
+        
+        <action name="login" class="beans.Login">
+            <result name="success">postings.jsp</result>
+            <exception-mapping exception="java.lang.NullPointerException" result="error"/>
+            <result name="error">error.jsp</result>
+            <result name="input">login.jsp</result>
+            <result name="error_pass">error_password.jsp</result>
+        </action>
+        
+        <action name="logout" class="beans.Login" method="logout">
+            <exception-mapping exception="java.lang.NullPointerException" result="error"/>
+            <result name="success">index.jsp</result>
+        </action>
+        
+        <action name="pass_reset">
+            <exception-mapping exception="java.lang.NullPointerException" result="error"/>
+            <result>pass_reset.jsp</result>
+        </action>
+        
+        <action name="help">
+            <exception-mapping exception="java.lang.NullPointerException" result="error"/>
+            <result>footer/help.jsp</result>
+        </action>
+        
+        <action name="contact">
+            <exception-mapping exception="java.lang.NullPointerException" result="error"/>
+            <result>footer/contact.jsp</result>
+        </action>
+        
+        <action name="about_us">
+            <exception-mapping exception="java.lang.NullPointerException" result="error"/>
+            <result>footer/about_us.jsp</result>
+        </action>
+        
+        <action name="password" class="beans.PasswordReset">
+            <result name="success">email_success.jsp</result>
+            <result name="fail">email_fail.jsp</result>
+            <result name="input">pass_reset.jsp</result>
+        </action>
+        
+        <action name="register" class="beans.Register">
+            <exception-mapping exception="java.lang.NullPointerException" result="error"/>
+            <result name="success">login.jsp</result>
+            <result name="input">register.jsp</result>
+        </action>
+        
+        <action name="change" class="beans.PasswordReset" method="getToken">
+            <result name="success">login.jsp</result>
+            <result name="fail">error_password.jsp</result>
+            <result name="input">change_password.jsp</result>
+        </action>
+        
+        <action name="newpost" class="beans.NewPosting" method="execute">
+            <result name="success">postings.jsp</result>
+        </action> 
+        
+        <action name="send_message" class="beans.SelectUserAction" method="execute">
+            <result name="success">postings.jsp</result>
+            <result name="input">messages.jsp</result>
+        </action>
+        
+        <action name="update_profile" class="beans.SelectUserAction" method="execute">
+            <result name="success">postings.jsp</result>
+            <result name="input">profile.jsp</result>
+        </action>
+                                      
+    </package>
+</struts>

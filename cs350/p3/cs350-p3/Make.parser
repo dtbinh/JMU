@@ -1,0 +1,17 @@
+# -*- makefile -*-
+
+############################################################
+# This Makefile specifies options for the parser front-end #
+############################################################
+
+FBSRC = src/verilog
+
+FLEX = $(FBSRC)/tokens.cpp
+BISON = $(FBSRC)/parser.cpp
+BISONH = $(patsubst %.cpp,%.hpp,$(BISON))
+
+$(FLEX): $(FBSRC)/tokens.lex $(BISONH)
+	flex -o $@ $^
+
+$(BISON): src/verilog/parser.y
+	bison -d -o $@ $^

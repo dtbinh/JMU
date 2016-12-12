@@ -1,0 +1,24 @@
+/*
+ * state.c
+ *
+ *  Created on: Oct 08, 2015
+ *      Author: Joshua Lyons and Conner Turnbull (Group 1)
+ */
+
+#ifndef STATE_C
+#define STATE_C
+
+#include <stdlib.h>
+#include "state.h"
+#include <stdio.h>
+
+state_t* default_event_handler()
+{
+    return NULL;
+}
+
+void default_action()
+{
+}
+
+#endif

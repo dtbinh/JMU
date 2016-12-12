@@ -1,0 +1,19 @@
+# -*- makefile -*-
+
+########################################
+# Begin making edits here as necessary #
+########################################
+
+# Source code listing
+# To add another source code file for the project, remove the "# "
+# at the beginning of the second line and change the name from
+# "another.c" to the name of your source code file
+
+src/main_SRC    = src/main/main.c
+
+src/cmdline_SRC = src/cmdline/parse.c
+
+src/machine_SRC = src/machine/disassemble.c
+src/machine_SRC += src/machine/interpret.c
+
+src/output_SRC = src/output/print.c
